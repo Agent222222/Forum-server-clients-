@@ -1,0 +1,11 @@
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.exe.config
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.exe
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.pdb
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.AssemblyReference.cache
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.Form1.resources
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.Properties.Resources.resources
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.GenerateResource.cache
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.CoreCompileInputs.cache
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.exe
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.pdb
+D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.authorization.resources
