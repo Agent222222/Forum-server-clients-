@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\olesz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\Messenger_server\\lab-9_server\\lab-9_server.csproj",
+      "projectUniqueName": "D:\\Study\\Terms\\3 term\\OS\\Lab 9\\Messenger_server\\lab-9_server\\lab-9_server.csproj",
       "projectName": "lab-9_server",
-      "projectPath": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\Messenger_server\\lab-9_server\\lab-9_server.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\Messenger_server\\lab-9_server\\obj\\",
+      "projectPath": "D:\\Study\\Terms\\3 term\\OS\\Lab 9\\Messenger_server\\lab-9_server\\lab-9_server.csproj",
+      "packagesPath": "C:\\Users\\olesz\\.nuget\\packages\\",
+      "outputPath": "D:\\Study\\Terms\\3 term\\OS\\Lab 9\\Messenger_server\\lab-9_server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\olesz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

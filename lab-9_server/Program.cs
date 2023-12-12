@@ -1,16 +1,58 @@
 ﻿using System;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.Text.RegularExpressions;
 
 class Server
 {
-    private static IPAddress ipAddress = IPAddress.Parse("10.10.10.104"); // Замініть на свій статичний IP
-    private const int port = 12345;
 
+    private static IPAddress ipAddress;// Замініть на свій статичний IP
+    private const int port = 12345;
+    static async Task FindIP()
+    {
+        try
+        {
+            // Запускаємо ipconfig та отримуємо вивід
+            string ipConfigOutput = ExecuteCommand("ipconfig", "/all");
+
+            // Знаходимо глобальну IPv4-адресу для адаптера Wi-Fi
+            string wirelessIPv4Address = FindIPv4Address(ipConfigOutput, "Wireless LAN adapter Wi-Fi");
+            ipAddress = IPAddress.Parse(wirelessIPv4Address);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Помилка: {ex.Message}");
+        }
+    }
+    static string ExecuteCommand(string command, string arguments)
+    {
+        System.Diagnostics.Process process = new System.Diagnostics.Process();
+        process.StartInfo.FileName = command;
+        process.StartInfo.Arguments = arguments;
+        process.StartInfo.UseShellExecute = false;
+        process.StartInfo.RedirectStandardOutput = true;
+        process.StartInfo.CreateNoWindow = true;
+        process.Start();
+        string output = process.StandardOutput.ReadToEnd();
+        process.WaitForExit();
+        return output;
+    }
+    static string FindIPv4Address(string ipConfigOutput, string adapterName)
+    {
+        string pattern = $"{adapterName}[\\s\\S]*?IPv4 Address[.\\s]+: ([0-9\\.]+)";
+        Match match = Regex.Match(ipConfigOutput, pattern);
+        return match.Success ? match.Groups[1].Value : "Не знайдено";
+    }
+
+    /////////////////////////////////////////////
     static async Task Main(string[] args)
     {
+        FindIP();
+
         TcpListener server = new TcpListener(ipAddress, port);
         server.Start();
         Console.WriteLine($"Сервер слухає на {ipAddress}:{port}");
@@ -45,9 +87,9 @@ class Server
                         string[] words = content.Split(' ', '\r', '\n');
                         string[] nonEmptyWords = words.Where(s => !string.IsNullOrEmpty(s)).ToArray();
 
-                        for (int i = 0; i< nonEmptyWords.Count(); i+=2)
+                        for (int i = 0; i < nonEmptyWords.Count(); i += 2)
                         {
-                            if (check[1] == nonEmptyWords[i] && check[2] == nonEmptyWords[i+1])
+                            if (check[1] == nonEmptyWords[i] && check[2] == nonEmptyWords[i + 1])
                             {
                                 string saved = File.ReadAllText("received_data.txt");
 
@@ -58,15 +100,16 @@ class Server
                             }
                         }
 
-                       
-                        if(ch == 0)
+
+                        if (ch == 0)
                         {
                             byte[] response = Encoding.UTF8.GetBytes($"0 log in error");
                             Console.WriteLine($"Вивід помилки на екран клієнта: {response}");
                             await stream.WriteAsync(response, 0, response.Length);
                         }
 
-                    }else if(data[0] == 'S')
+                    }
+                    else if (data[0] == 'S')
                     {
                         int ch = 0;
                         string filePath = "users_data.txt";
@@ -84,7 +127,7 @@ class Server
                                 byte[] response = Encoding.UTF8.GetBytes($"0 sign in error");
                                 Console.WriteLine($"Вивід на екран клієнта: {response}");
                                 await stream.WriteAsync(response, 0, response.Length);
-                                
+
                             }
                         }
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,8 @@ namespace Messenger_interface
 
     public partial class Form1 : Form
     {
-        const string serverIp = "10.10.10.104"; // Замініть на статичний IP вашого сервера
+
+        string serverIp = "192.168.253.204"; // Замініть на статичний IP вашого сервера
         const int serverPort = 12345;
         bool connection = false;
 
@@ -28,7 +30,7 @@ namespace Messenger_interface
 
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             form.ShowDialog();
 
             client.Connect(serverIp, serverPort);
@@ -46,9 +48,11 @@ namespace Messenger_interface
                 MessageBox.Show("Successful login!", "MessageBox Example", MessageBoxButtons.OK);
                 connection = true;
                 response = response.Substring(2);
+
+                rtbChat.ReadOnly = false;
                 rtbChat.Text += response;
                 rtbMessage.Text = "";
-
+                rtbChat.ReadOnly = true;
             }
             else
             {
@@ -59,10 +63,10 @@ namespace Messenger_interface
 
         private void btSendMessage_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                if(connection == true)
+                if (connection == true)
                 {
                     NetworkStream stream = client.GetStream();
 
@@ -75,10 +79,12 @@ namespace Messenger_interface
                     int bytesRead = stream.Read(buffer, 0, buffer.Length);
                     string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
+                    rtbChat.ReadOnly = false;
                     rtbChat.Text += "\n" + response;
                     rtbMessage.Text = "";
+                    rtbChat.ReadOnly = true;
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -89,6 +95,7 @@ namespace Messenger_interface
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             form.ShowDialog();
+
             client.Connect(serverIp, serverPort);
             NetworkStream stream = client.GetStream();
             string inputData = "S " + form.login + " " + form.password;
@@ -104,9 +111,11 @@ namespace Messenger_interface
                 MessageBox.Show("Successful registration!", "MessageBox Example", MessageBoxButtons.OK);
                 connection = true;
                 response = response.Substring(2);
+
+                rtbChat.ReadOnly = false;
                 rtbChat.Text += response;
                 rtbMessage.Text = "";
-
+                rtbChat.ReadOnly = true;
             }
             else
             {
