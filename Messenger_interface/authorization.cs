@@ -13,6 +13,7 @@ namespace Messenger_interface
     public partial class authorization : Form
     {
         public string login;
+        public string password;
 
         public authorization()
         {
@@ -23,8 +24,9 @@ namespace Messenger_interface
         {
 
             login = tbLogin.Text;
-
+            password = tbPasswd.Text;
             this.Close();
         }
+
     }
 }

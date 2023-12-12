@@ -31,13 +31,17 @@
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.btApply = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbPasswd = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbLogin
             // 
-            this.tbLogin.Location = new System.Drawing.Point(149, 138);
+            this.tbLogin.Location = new System.Drawing.Point(146, 133);
+            this.tbLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbLogin.Multiline = true;
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(134, 22);
+            this.tbLogin.Size = new System.Drawing.Size(198, 44);
             this.tbLogin.TabIndex = 0;
             // 
             // btApply
@@ -46,12 +50,12 @@
             this.btApply.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btApply.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btApply.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btApply.Location = new System.Drawing.Point(149, 202);
+            this.btApply.Location = new System.Drawing.Point(148, 306);
+            this.btApply.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btApply.Name = "btApply";
-            this.btApply.Size = new System.Drawing.Size(134, 39);
+            this.btApply.Size = new System.Drawing.Size(196, 62);
             this.btApply.TabIndex = 2;
             this.btApply.Text = "Apply";
-            this.btApply.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btApply.UseVisualStyleBackColor = false;
             this.btApply.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -60,22 +64,45 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(146, 106);
+            this.label1.Location = new System.Drawing.Point(142, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 28);
+            this.label1.Size = new System.Drawing.Size(78, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
             // 
+            // tbPasswd
+            // 
+            this.tbPasswd.Location = new System.Drawing.Point(146, 222);
+            this.tbPasswd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbPasswd.Multiline = true;
+            this.tbPasswd.Name = "tbPasswd";
+            this.tbPasswd.Size = new System.Drawing.Size(198, 44);
+            this.tbPasswd.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(142, 186);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 32);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Password";
+            // 
             // authorization
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(435, 391);
+            this.ClientSize = new System.Drawing.Size(489, 489);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbPasswd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btApply);
             this.Controls.Add(this.tbLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "authorization";
             this.Text = "Authorization";
             this.ResumeLayout(false);
@@ -88,5 +115,7 @@
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Button btApply;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbPasswd;
+        private System.Windows.Forms.Label label2;
     }
 }

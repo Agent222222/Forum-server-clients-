@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\lab-9_server\\lab-9_server.csproj",
+      "projectUniqueName": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\Messenger_server\\lab-9_server\\lab-9_server.csproj",
       "projectName": "lab-9_server",
-      "projectPath": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\lab-9_server\\lab-9_server.csproj",
+      "projectPath": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\Messenger_server\\lab-9_server\\lab-9_server.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\lab-9_server\\obj\\",
+      "outputPath": "E:\\Slavery\\ONLY_FANS\\2curs\\OS-lab\\lab-9\\Messenger_server\\lab-9_server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

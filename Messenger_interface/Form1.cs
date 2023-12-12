@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,8 +12,14 @@ using System.Windows.Forms;
 
 namespace Messenger_interface
 {
+
     public partial class Form1 : Form
     {
+        const string serverIp = "10.10.10.104"; // Замініть на статичний IP вашого сервера
+        const int serverPort = 12345;
+        bool connection = false;
+
+        TcpClient client = new TcpClient();
         authorization form = new authorization();
         public Form1()
         {
@@ -23,18 +30,89 @@ namespace Messenger_interface
         {
             
             form.ShowDialog();
+
+            client.Connect(serverIp, serverPort);
+            NetworkStream stream = client.GetStream();
+            string inputData = "L " + form.login + " " + form.password;
+
+            byte[] data = Encoding.UTF8.GetBytes(inputData);
+            stream.Write(data, 0, data.Length);
+
+            byte[] buffer = new byte[1024];
+            int bytesRead = stream.Read(buffer, 0, buffer.Length);
+            string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+            if (response[0] == '1')
+            {
+                MessageBox.Show("Successful login!", "MessageBox Example", MessageBoxButtons.OK);
+                connection = true;
+                response = response.Substring(2);
+                rtbChat.Text += response;
+                rtbMessage.Text = "";
+
+            }
+            else
+            {
+                connection = false;
+                MessageBox.Show(response, "MessageBox Example", MessageBoxButtons.OK);
+            }
         }
 
         private void btSendMessage_Click(object sender, EventArgs e)
         {
+            
+            try
+            {
+                if(connection == true)
+                {
+                    NetworkStream stream = client.GetStream();
 
-            rtbChat.Text = form.login;
+                    string inputData = "T (" + form.login + ") " + rtbMessage.Text;
+
+                    byte[] data = Encoding.UTF8.GetBytes(inputData);
+                    stream.Write(data, 0, data.Length);
+
+                    byte[] buffer = new byte[1024];
+                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                    string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+
+                    rtbChat.Text += "\n" + response;
+                    rtbMessage.Text = "";
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Помилка підключення: " + ex.Message, "MessageBox Example", MessageBoxButtons.OK);
+            }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
             form.ShowDialog();
+            client.Connect(serverIp, serverPort);
+            NetworkStream stream = client.GetStream();
+            string inputData = "S " + form.login + " " + form.password;
+
+            byte[] data = Encoding.UTF8.GetBytes(inputData);
+            stream.Write(data, 0, data.Length);
+
+            byte[] buffer = new byte[1024];
+            int bytesRead = stream.Read(buffer, 0, buffer.Length);
+            string response = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+            if (response[0] == '1')
+            {
+                MessageBox.Show("Successful registration!", "MessageBox Example", MessageBoxButtons.OK);
+                connection = true;
+                response = response.Substring(2);
+                rtbChat.Text += response;
+                rtbMessage.Text = "";
+
+            }
+            else
+            {
+                connection = false;
+                MessageBox.Show(response, "MessageBox Example", MessageBoxButtons.OK);
+            }
         }
     }
 }

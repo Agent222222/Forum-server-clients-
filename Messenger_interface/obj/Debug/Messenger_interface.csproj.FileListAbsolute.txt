@@ -9,3 +9,15 @@ D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Mess
 D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.exe
 D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.pdb
 D:\studying\3semestr\os\lab9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.authorization.resources
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.exe.config
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.exe
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.pdb
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.AssemblyReference.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.SuggestedBindingRedirects.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.authorization.resources
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.Form1.resources
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.Properties.Resources.resources
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.GenerateResource.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.CoreCompileInputs.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.exe
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.pdb
