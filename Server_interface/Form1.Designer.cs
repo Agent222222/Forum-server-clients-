@@ -64,7 +64,6 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(340, 319);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.UserDeletingRow += button3_Click;
             // 
             // Column1
             // 
@@ -155,12 +154,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.ForeColor = System.Drawing.Color.Green;
             this.label5.Location = new System.Drawing.Point(659, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 29);
+            this.label5.Size = new System.Drawing.Size(48, 29);
             this.label5.TabIndex = 8;
-            this.label5.Text = "OFF";
+            this.label5.Text = "ON";
             // 
             // Form1
             // 
