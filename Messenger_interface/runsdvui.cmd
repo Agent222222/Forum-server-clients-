@@ -1,0 +1,2 @@
+cd /d "E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface" &msbuild "Messenger_interface.csproj" /t:sdvViewer /p:configuration="Debug" /p:platform="Any CPU" /p:SolutionDir="E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface" 
+exit %errorlevel% 

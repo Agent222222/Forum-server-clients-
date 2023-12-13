@@ -21,14 +21,3 @@ E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj
 E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.CoreCompileInputs.cache
 E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.exe
 E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.pdb
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.exe.config
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.exe
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\bin\Debug\Messenger_interface.pdb
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.AssemblyReference.cache
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.authorization.resources
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.Form1.resources
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.Properties.Resources.resources
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.GenerateResource.cache
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.csproj.CoreCompileInputs.cache
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.exe
-D:\Study\Terms\3 term\OS\Lab 9\Messenger_server\Messenger_interface\obj\Debug\Messenger_interface.pdb

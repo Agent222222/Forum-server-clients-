@@ -14,6 +14,7 @@ namespace Messenger_interface
     {
         public string login;
         public string password;
+        public string IP;
 
         public authorization()
         {
@@ -25,6 +26,7 @@ namespace Messenger_interface
 
             login = tbLogin.Text;
             password = tbPasswd.Text;
+            IP = IP_inpt.Text;
             this.Close();
         }
 

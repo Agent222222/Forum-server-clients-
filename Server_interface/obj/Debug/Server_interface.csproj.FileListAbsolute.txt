@@ -1,0 +1,11 @@
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\bin\Debug\Server_interface.exe.config
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\bin\Debug\Server_interface.exe
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\bin\Debug\Server_interface.pdb
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.csproj.AssemblyReference.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.csproj.SuggestedBindingRedirects.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.Form1.resources
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.Properties.Resources.resources
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.csproj.GenerateResource.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.csproj.CoreCompileInputs.cache
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.exe
+E:\Slavery\ONLY_FANS\2curs\OS-lab\lab-9\Messenger_server\Server_interface\obj\Debug\Server_interface.pdb

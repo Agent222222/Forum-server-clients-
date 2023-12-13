@@ -1,0 +1,5 @@
+
+(mykola):    hello
+(oleg):    nice to meet you
+(mykola):    I am tired of coding this app, it's 6 am, and I was coding the whole night
+(mykola):    i am done
