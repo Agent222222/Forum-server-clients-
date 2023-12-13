@@ -269,25 +269,34 @@ namespace Server_interface
 
                             if (ch == 0)
                             {
-                                string modifiedData = data.Substring(2);
-                                System.IO.File.AppendAllText("users_data.txt", $"\n{modifiedData}");
-                                string saved = File.ReadAllText("received_data.txt");
-
-                                logined.Add(check[1]);
-                                logined.Add(check[2]);
-                                logined.Add(check[3]);
-
-                                instance.dataGridView1.RowCount = 1;
-                                for (int h = 0; h < logined.Count / 3; h++)
+                                DialogResult result = MessageBox.Show($"Client: {check[1]} want to register (Confirm ?)", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (result == DialogResult.Yes)
                                 {
-                                    instance.dataGridView1.RowCount++;
-                                    instance.dataGridView1.Rows[h].Cells[0].Value = logined[2 * h + h];
-                                    instance.dataGridView1.Rows[h].Cells[1].Value = logined[2 * h + h + 2];
-                                }
+                                    string modifiedData = data.Substring(2);
+                                    System.IO.File.AppendAllText("users_data.txt", $"\n{modifiedData}");
+                                    string saved = File.ReadAllText("received_data.txt");
 
-                                byte[] response = Encoding.UTF8.GetBytes($"1 {saved}");
-                                Console.WriteLine($"Вивід на екран клієнта: {response}");
-                                await stream.WriteAsync(response, 0, response.Length);
+                                    logined.Add(check[1]);
+                                    logined.Add(check[2]);
+                                    logined.Add(check[3]);
+
+                                    instance.dataGridView1.RowCount = 1;
+                                    for (int h = 0; h < logined.Count / 3; h++)
+                                    {
+                                        instance.dataGridView1.RowCount++;
+                                        instance.dataGridView1.Rows[h].Cells[0].Value = logined[2 * h + h];
+                                        instance.dataGridView1.Rows[h].Cells[1].Value = logined[2 * h + h + 2];
+                                    }
+
+                                    byte[] response = Encoding.UTF8.GetBytes($"1 {saved}");
+                                    Console.WriteLine($"Вивід на екран клієнта: {response}");
+                                    await stream.WriteAsync(response, 0, response.Length);
+                                }
+                                else
+                                {
+
+                                }
+                               
                             }
                         }
                         else if (data[0] == 'T')

@@ -248,12 +248,18 @@ namespace Messenger_interface
                 }
                 else if (response[0] == '2')
                 {
+                    connection = false;
                     MessageBox.Show("This name is already captured", "MessageBox Example", MessageBoxButtons.OK);
                 }
                 else if (response[0] == '0')
                 {
                     connection = false;
                     MessageBox.Show(response, "MessageBox Example", MessageBoxButtons.OK);
+                }
+                else if (response[0] == '6')
+                {
+                    connection = false;
+                    MessageBox.Show("Registration was declined by the server", "MessageBox Example", MessageBoxButtons.OK);
                 }
             }
             catch (Exception ex)
