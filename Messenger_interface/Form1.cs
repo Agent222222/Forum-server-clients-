@@ -123,7 +123,7 @@ namespace Messenger_interface
                         response = response.Substring(2);
 
                         rtbChat.ReadOnly = false;
-                        rtbChat.Text += response;
+                        rtbChat.Text = response;
                         rtbMessage.Text = "";
                         rtbChat.ReadOnly = true;
                     }
